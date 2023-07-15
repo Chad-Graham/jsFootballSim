@@ -13,6 +13,14 @@ let yardLine = 40;
 
 let possession = "player";
 
+let lowNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+
+let runNumbers = [16, 17, 18, 19, 20, 21, 22, 23]
+
+let dbNumbers = [24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38]
+
+let wideNumbers = [80, 81, 82, 83, 84, 85, 86, 87, 88, 89]
+
 let teams = ["Eagles",
     "Tigers",
     "Broncos",
@@ -108,7 +116,7 @@ let areas = ["Midtown",
     "Wallace",
     "Mountain"];
 
-let first_names = ["Liam",
+let firstNames = ["Liam",
     "Noah",
     "Oliver",
     "Elijah",
@@ -386,7 +394,7 @@ let first_names = ["Liam",
     "Jorge",
     "Tobias"];
 
-let last_names = ["Smith",
+let lastNames = ["Smith",
     "Johnson",
     "Williams",
     "Brown",
@@ -449,7 +457,7 @@ let oplays = ["Middle",
     "Reverse",
     "Option"];
 
-let opass = ["Long Pass",
+let oPass = ["Long Pass",
     "Hail Mary",
     "Deep Post",
     "Stop and Go",
@@ -464,7 +472,7 @@ let opass = ["Long Pass",
     "Lateral Pass",
     "Slant"];
 
-let oforms = ["I Form",
+let oForms = ["I Form",
     "Offset",
     "Single Back",
     "Pro Set",
@@ -472,18 +480,18 @@ let oforms = ["I Form",
     "Shotgun",
     "Pistol"];
 
-let dpforms = ["The 3-4",
+let dpForms = ["The 3-4",
     "The 4-3",
     "Nickle",
     "Dime",
     "Prevent"];
 
-let drforms = ["The 3-4",
+let drForms = ["The 3-4",
     "The 4-3",
     "Run Blitz",
     "Heavy"];
 
-let dpass = ["Man Cover",
+let dPass = ["Man Cover",
     "Zone Cover",
     "Pass Blitz",
     "Cover Two",
@@ -500,6 +508,89 @@ class Team {
         this.school = schools.splice(Math.floor(Math.random() * schools.length), 1);
         this.area = areas.splice(Math.floor(Math.random() * areas.length), 1);
         this.score = 0;
+        this.oline = (Math.floor(Math.random() * 80));
+        this.dline = (Math.floor(Math.random() * 80));
+        this.qbFirstName = firstNames.splice(Math.floor(Math.random() * firstNames.length), 1);
+        this.qbLastName = lastNames.splice(Math.floor(Math.random() * lastNames.length), 1);
+        this.qbRank = (Math.floor(Math.random() * 80));
+        this.qbNumber = lowNumbers.splice(Math.floor(Math.random() * lowNumbers.length), 1);
+
+        this.kickerFirstName = firstNames.splice(Math.floor(Math.random() * firstNames.length), 1);
+        this.kickerLastName = lastNames.splice(Math.floor(Math.random() * lastNames.length), 1);
+        this.kickerRank = (Math.floor(Math.random() * 80));
+        this.kickerNumber = lowNumbers.splice(Math.floor(Math.random() * lowNumbers.length), 1);
+
+        this.punterFirstName = firstNames.splice(Math.floor(Math.random() * firstNames.length), 1);
+        this.punterLastName = lastNames.splice(Math.floor(Math.random() * lastNames.length), 1);
+        this.punterRank = (Math.floor(Math.random() * 80));
+        this.punterNumber = lowNumbers.splice(Math.floor(Math.random() * lowNumbers.length), 1);
+
+        this.returnFirstName = firstNames.splice(Math.floor(Math.random() * firstNames.length), 1);
+        this.returnLastName = lastNames.splice(Math.floor(Math.random() * lastNames.length), 1);
+        this.returnRank = (Math.floor(Math.random() * 80));
+        this.returnNumber = lowNumbers.splice(Math.floor(Math.random() * lowNumbers.length), 1);
+
+        this.wrOneFirstName = firstNames.splice(Math.floor(Math.random() * firstNames.length), 1);
+        this.wrOneLastName = lastNames.splice(Math.floor(Math.random() * lastNames.length), 1);
+        this.wrOneRank = (Math.floor(Math.random() * 80));
+        this.wrOneNumber = wideNumbers.splice(Math.floor(Math.random() * wideNumbers.length), 1);
+
+        this.wrTwoFirstName = firstNames.splice(Math.floor(Math.random() * firstNames.length), 1);
+        this.wrTwoLastName = lastNames.splice(Math.floor(Math.random() * lastNames.length), 1);
+        this.wrTwoRank = (Math.floor(Math.random() * 80));
+        this.wrTwoNumber = wideNumbers.splice(Math.floor(Math.random() * wideNumbers.length), 1);
+
+        this.wrThreeFirstName = firstNames.splice(Math.floor(Math.random() * firstNames.length), 1);
+        this.wrThreeLastName = lastNames.splice(Math.floor(Math.random() * lastNames.length), 1);
+        this.wrThreeRank = (Math.floor(Math.random() * 80));
+        this.wrThreeNumber = wideNumbers.splice(Math.floor(Math.random() * wideNumbers.length), 1);
+
+        this.teFirstName = firstNames.splice(Math.floor(Math.random() * firstNames.length), 1);
+        this.teLastName = lastNames.splice(Math.floor(Math.random() * lastNames.length), 1);
+        this.teRank = (Math.floor(Math.random() * 80));
+        this.teNumber = wideNumbers.splice(Math.floor(Math.random() * wideNumbers.length), 1);
+
+        this.rbFirstName = firstNames.splice(Math.floor(Math.random() * firstNames.length), 1);
+        this.rbLastName = lastNames.splice(Math.floor(Math.random() * lastNames.length), 1);
+        this.rbRank = (Math.floor(Math.random() * 80));
+        this.rbNumber = runNumbers.splice(Math.floor(Math.random() * runNumbers.length), 1);
+
+        this.fbFirstName = firstNames.splice(Math.floor(Math.random() * firstNames.length), 1);
+        this.fbLastName = lastNames.splice(Math.floor(Math.random() * lastNames.length), 1);
+        this.fbRank = (Math.floor(Math.random() * 80));
+        this.fbNumber = runNumbers.splice(Math.floor(Math.random() * runNumbers.length), 1);
+
+        this.outsideLFirstName = firstNames.splice(Math.floor(Math.random() * firstNames.length), 1);
+        this.outsideLLastName = lastNames.splice(Math.floor(Math.random() * lastNames.length), 1);
+        this.outsideLRank = (Math.floor(Math.random() * 80));
+        this.outsideLNumber = dbNumbers.splice(Math.floor(Math.random() * dbNumbers.length), 1);
+
+        this.insideLFirstName = firstNames.splice(Math.floor(Math.random() * firstNames.length), 1);
+        this.insideLLastName = lastNames.splice(Math.floor(Math.random() * lastNames.length), 1);
+        this.insideLRank = (Math.floor(Math.random() * 80));
+        this.insideLNumber = dbNumbers.splice(Math.floor(Math.random() * dbNumbers.length), 1);
+
+        this.cornerOneFirstName = firstNames.splice(Math.floor(Math.random() * firstNames.length), 1);
+        this.cornerOneLastName = lastNames.splice(Math.floor(Math.random() * lastNames.length), 1);
+        this.cornerOneRank = (Math.floor(Math.random() * 80));
+        this.cornerOneNumber = dbNumbers.splice(Math.floor(Math.random() * dbNumbers.length), 1);
+
+        this.cornerTwoFirstName = firstNames.splice(Math.floor(Math.random() * firstNames.length), 1);
+        this.cornerTwoLastName = lastNames.splice(Math.floor(Math.random() * lastNames.length), 1);
+        this.cornerTwoRank = (Math.floor(Math.random() * 80));
+        this.cornerTwoNumber = dbNumbers.splice(Math.floor(Math.random() * dbNumbers.length), 1);
+
+        this.strongSafetyFirstName = firstNames.splice(Math.floor(Math.random() * firstNames.length), 1);
+        this.strongSafetyLastName = lastNames.splice(Math.floor(Math.random() * lastNames.length), 1);
+        this.strongSafetyRank = (Math.floor(Math.random() * 80));
+        this.strongSafetyNumber = dbNumbers.splice(Math.floor(Math.random() * dbNumbers.length), 1);
+
+        this.freeSafetyFirstName = firstNames.splice(Math.floor(Math.random() * firstNames.length), 1);
+        this.freeSafetyLastName = lastNames.splice(Math.floor(Math.random() * lastNames.length), 1);
+        this.freeSafetyRank = (Math.floor(Math.random() * 80));
+        this.freeSafetyNumber = dbNumbers.splice(Math.floor(Math.random() * dbNumbers.length), 1);
+
+        this.totalRank = ((this.qbRank + this.rbRank + this.oline + this.dline + this.wrOneRank + this.wrTwoRank + this.wrThreeRank + this.teRank + this.kickerRank + this.punterRank + this.outsideLRank + this.insideLRank + this.cornerOneRank + this.cornerTwoRank + this.strongSafetyRank + this.freeSafetyRank) / 16);
 
     }
 }
@@ -561,7 +652,7 @@ firstChoice();
 function startGame(choice) {
     if (choice === "whole") {
         /* kickoff with full time/quarter */
-        alert('whole');
+        kickOff();
     } else if (choice === "half") {
         /* play second half */
         quarterIndex = 3;
@@ -615,14 +706,61 @@ function kickOff() {
     updateScore();
     document.getElementById('choices').innerHTML = "";
 
-    let text = `Kickoff`;
+    let text = `The ${player.name} line up at the 40-yard line for the kickoff. ${player.area} ${player.school} kicker, ${player.kickerFirstName} ${player.kickerLastName}, wearing number ${player.kickerNumber}, is ready to send it away.<br><br>Number ${computer.returnNumber} for the ${computer.name}, ${computer.returnFirstName} ${computer.returnLastName},  is ready for the return. `;
+
     document.getElementById('gamebox').innerHTML = text;
+
+    if (quarterIndex === 1 && clock === 900) {
+        if (player.totalRank > computer.totalRank) {
+            document.getElementById('gamebox').innerHTML += `The ${player.name} are favored in tonight's matchup.`
+        } else {
+            document.getElementById('gamebox').innerHTML += `The ${computer.name} are favored in tonight's matchup.`
+        }
+    } else {
+        if (player.score === computer.score) {
+            document.getElementById('gamebox').innerHTML += `The score is tied at ${player.score} `;
+        } else if (player.score < computer.score) {
+            document.getElementById('gamebox').innerHTML += `The ${player.area} ${player.school} ${player.name} face a ${computer.score - player.score} point deficit `;
+        } else {
+            document.getElementById('gamebox').innerHTML += `The ${player.area} ${player.school} ${player.name} hold on to a ${player.score - computer.score} point lead `
+        };
+
+        if (clock === 900) {
+            document.getElementById('gamebox').innerHTML += `at the start of the ${quarter[quarterIndex]}.`;
+        } else {
+            let thisTime = gameClock(clock);
+            document.getElementById('gamebox').innerHTML += `with ${thisTime} left in the ${quarter[quarterIndex]}.`;
+        };
+    }
+
+    let buttons = `<button type="button" onclick="executeKick()" class="btn btn-primary">Kickoff</button>
+    <button type="button" onclick="onsideKick()" class="btn btn-primary">Onsides</button>`
+
+    document.getElementById('choices').innerHTML = buttons;
 }
 
 function kickDefend() {
     updateScore();
     document.getElementById('choices').innerHTML = "";
 
-    let text = `Kick defense`;
+    let text = `The ${computer.name} line up at the 40-yard line for the kickoff. ${computer.area} ${computer.school} kicker, ${computer.kickerFirstName} ${computer.kickerLastName}, wearing number ${computer.kickerNumber}, is ready to send it away.<br><br>Number ${player.returnNumber} for the ${player.name}, ${player.returnFirstName} ${player.returnLastName},  is ready for the return. `;
+
+
     document.getElementById('gamebox').innerHTML = text;
+
+    if (player.score === computer.score) {
+        document.getElementById('gamebox').innerHTML += `The score is tied at ${player.score} `;
+    } else if (player.score < computer.score) {
+        document.getElementById('gamebox').innerHTML += `The ${player.area} ${player.school} ${player.name} face a ${computer.score - player.score} point deficit `;
+    } else {
+        document.getElementById('gamebox').innerHTML += `The ${player.area} ${player.school} ${player.name} hold on to a ${player.score - computer.score} point lead `
+    };
+
+    if (clock === 900) {
+        document.getElementById('gamebox').innerHTML += `at the start of the ${quarter[quarterIndex]}.`;
+    } else {
+        let thisTime = gameClock(clock);
+        document.getElementById('gamebox').innerHTML += `with ${thisTime} left in the ${quarter[quarterIndex]}.`;
+    };
+
 }

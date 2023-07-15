@@ -1,3 +1,5 @@
 node_modules
 js/gameVariables.js
 js/gameVariables2.js
+js/team_builder.py
+js/toDO.md
