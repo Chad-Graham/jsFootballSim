@@ -763,4 +763,9 @@ function kickDefend() {
         document.getElementById('gamebox').innerHTML += `with ${thisTime} left in the ${quarter[quarterIndex]}.`;
     };
 
+    let buttons = `<button type="button" onclick="executeReturn()" class="btn btn-primary">Return</button>
+    <button type="button" onclick="executeCover()" class="btn btn-primary">Cover</button>`
+
+    document.getElementById('choices').innerHTML = buttons;
+
 }
